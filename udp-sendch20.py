@@ -3,7 +3,7 @@
 import socket
 from getch20 import get_ch20
 import time
-ip_port = ('47.105.88.192',8888)
+ip_port = ('',8888)
 sk = socket.socket()
 sk.connect(ip_port)
 sk.settimeout(5)
