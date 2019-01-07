@@ -3,6 +3,7 @@
 import socket
 from getch20 import get_ch20
 import time
+#向云服务器发送采集的甲醛数据
 ip_port = ('',8888)
 sk = socket.socket()
 sk.connect(ip_port)
