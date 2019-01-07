@@ -7,7 +7,7 @@ def serial_Factory(cmd,num):
 	serials = serial.Serial('/dev/ttyUSB0',9600) 
 	serials.write(cmd) 
 	argv = serials.read(3) 
-        argv1 =serials.read(1) 
+        argv1 =serials.read(1) #读取高位和地位
 	#print argv
 	result = '' 
 	result1 = ''
@@ -26,7 +26,7 @@ def serial_Factory(cmd,num):
 
 
 def get_ch20():
-    cmd = '\xff\x01\x86\x00\x00\x00\x00\x00\x79'
+    cmd = '\xff\x01\x86\x00\x00\x00\x00\x00\x79'#向设备问询指令
     num = 9
     back = serial_Factory(cmd,num)
     b=str(int(back,16))+"微克/立方"
